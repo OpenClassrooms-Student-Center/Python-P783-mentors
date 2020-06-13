@@ -6,14 +6,14 @@ Holiday lettings website
 
 ### Prerequisites
 
-- A GitHub account with read access to this repository
+- GitHub account with read access to this repository
 - Git CLI
 - SQLite3 CLI
-- A Python interpreter, version 3.6 or higher. 
+- Python interpreter, version 3.6 or higher. 
 - In the rest of the local development documentation, it is assumed the command `python` in 
 your OS shell runs the above Python interpreter (unless a virtual environment is activated)
 
-### Linux
+### macOS / Linux
 
 #### Clone the repository
 
