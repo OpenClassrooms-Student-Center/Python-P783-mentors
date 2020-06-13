@@ -1,7 +1,12 @@
+<title>Profiles</title>
 {% if profiles_list %}
     <ul>
     {% for profile in profiles_list %}
-        <li><a href="/profiles/{{ profile.user.username }}/">{{ profile.user.username }}</a></li>
+        <li>
+            <a href="{% url 'profile' username=profile.user.username %}">
+                {{ profile.user.username }}
+            </a>
+        </li>
     {% endfor %}
     </ul>
 {% else %}

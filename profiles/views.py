@@ -11,6 +11,5 @@ def index(request):
 
 def profile(request, username):
     profile = Profile.objects.get(user__username=username)
-    print('profile', profile.user.username)
     context = {'profile': profile}
     return render(request, 'profiles/profile.html', context)
