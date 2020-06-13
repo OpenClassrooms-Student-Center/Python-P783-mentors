@@ -6,6 +6,8 @@ Holiday lettings website
 
 ### Prerequisites
 
+- A GitHub account with read access to this repository
+- Git CLI
 - A Python interpreter, version 3.6 or higher. 
 - In the rest of the local development documentation, it is assumed the command `python` in 
 your OS shell runs the above Python interpreter (unless a virtual environment is activated)
