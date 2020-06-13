@@ -8,6 +8,7 @@ Holiday lettings website
 
 - A GitHub account with read access to this repository
 - Git CLI
+- SQLite3 CLI
 - A Python interpreter, version 3.6 or higher. 
 - In the rest of the local development documentation, it is assumed the command `python` in 
 your OS shell runs the above Python interpreter (unless a virtual environment is activated)
@@ -39,3 +40,18 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
 - `python manage.py runserver`
 - Go to `http://localhost:8000` in a browser
 - Confirm the site is running and can be navigated (you should see several profiles and lettings)
+
+#### Database
+
+- `cd /path/to/lettings-site`
+- Open a shell session `sqlite3`
+- Connect to the database `.open lettings-site.sqlite3`
+- Display tables in the database `.tables`
+- Display columns in the profiles table, `pragma table_info(profiles_profile);`
+- Run a query on the profiles table, `select user_id, favorite_city from profiles_profile where favorite_city like 'B%';`
+- `CTRL+D` to exit
+
+#### Admin panel
+
+- Go to 'http://localhost:8000/admin'
+- Login with user `admin`, password `Abc1234!`
