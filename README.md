@@ -53,5 +53,5 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
 
 #### Admin panel
 
-- Go to 'http://localhost:8000/admin'
+- Go to `http://localhost:8000/admin`
 - Login with user `admin`, password `Abc1234!`
