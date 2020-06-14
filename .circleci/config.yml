@@ -2,15 +2,31 @@ version: 2.1
 orbs:
   heroku: circleci/heroku@1.0.1
 jobs:
+  build-and-test:
+    docker:
+      - image: python:3
+    steps:
+      - checkout
+      - run:
+          name: Virtual environment
+          command: ./build-env.sh
+          when: always
+      - run:
+          name: Python linting
+          command: flake8
+          when: always
   deploy-production:
     executor: heroku/default
     steps:
       - checkout
       - heroku/deploy-via-git
 workflows:
-  deploy:
+  build-test-deploy:
     jobs:
+      - build-and-test
       - deploy-production:
+          requires:
+            - build-and-test
           filters:
             branches:
               only:
