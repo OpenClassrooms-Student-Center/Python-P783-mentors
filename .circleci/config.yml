@@ -15,6 +15,10 @@ jobs:
           name: Python linting
           command: source lettings-site/bin/activate && flake8
           when: always
+      - run:
+          name: Unit tests
+          command: source lettings-site/bin/activate && pytest
+          when: always
   deploy-production:
     executor: heroku/default
     steps:

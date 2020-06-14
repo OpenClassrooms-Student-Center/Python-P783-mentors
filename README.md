@@ -41,6 +41,18 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
 - Go to `http://localhost:8000` in a browser
 - Confirm the site is running and can be navigated (you should see several profiles and lettings)
 
+#### Linting
+
+- `cd /path/to/lettings-site`
+- `source lettings-site/bin/activate`
+- `flake8`
+
+#### Unit tests
+
+- `cd /path/to/lettings-site`
+- `source lettings-site/bin/activate`
+- `pytest`
+
 #### Database
 
 - `cd /path/to/lettings-site`
