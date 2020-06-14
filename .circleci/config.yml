@@ -13,7 +13,7 @@ jobs:
           when: always
       - run:
           name: Python linting
-          command: flake8
+          command: source lettings-site/bin/activate && flake8
           when: always
   deploy-production:
     executor: heroku/default
