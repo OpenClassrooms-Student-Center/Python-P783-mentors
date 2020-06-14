@@ -6,7 +6,9 @@ Holiday lettings website
 
 ### Prerequisites
 
-- GitHub account with read access to this repository
+- GitHub account with read and write access to this repository's code
+- Access to the CircleCI project `lettings-site`
+- Heroku account
 - Git CLI
 - SQLite3 CLI
 - Python interpreter, version 3.6 or higher. 
@@ -67,3 +69,16 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
 
 - Go to `http://localhost:8000/admin`
 - Login with user `admin`, password `Abc1234!`
+
+## Deployment
+
+- In the Heroku dashboard
+    - Copy the API key `<heroku-api-key>`
+    - Create a new app `<heroku-app-name>` (if you leave the field blank, Heroku will create a
+    name for you)
+- In CircleCI, create environment variables
+    - `HEROKU_API_KEY` with value `<heroku-api-key>`
+    - `HEROKU_APP_NAME` with value `<heroku-app-name>`
+    - Trigger a build via the CircleCI web console or by pushing a commit to `master`
+    - Navigate to `https://<heroku-app-name>.herokuapp.com` in a browser
+    - Confirm the site is running
