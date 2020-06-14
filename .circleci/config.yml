@@ -12,3 +12,7 @@ workflows:
   deploy:
     jobs:
       - deploy-production
+          filters:
+            branches:
+              only:
+                - master
