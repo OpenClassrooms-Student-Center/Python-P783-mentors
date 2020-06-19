@@ -8,4 +8,5 @@ urlpatterns = [
     path('profiles/', include(('profiles.urls', 'profiles'))),
     path('lettings/', include(('lettings.urls', 'lettings'))),
     path('admin/', admin.site.urls),
+    path('sentry-debug/', views.trigger_error)
 ]
