@@ -17,6 +17,8 @@ Holiday lettings website
 In the rest of the local development documentation, it is assumed the command `python` in 
 your OS shell runs the above Python interpreter (unless a virtual environment is activated)
 
+
+
 ### macOS / Linux
 
 #### Clone the repository
@@ -65,12 +67,21 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
 - Display tables in the database `.tables`
 - Display columns in the profiles table, `pragma table_info(profiles_profile);`
 - Run a query on the profiles table, `select user_id, favorite_city from profiles_profile where favorite_city like 'B%';`
-- `CTRL+D` to exit
+- `.quit` to exit
 
 #### Admin panel
 
 - Go to `http://localhost:8000/admin`
 - Login with user `admin`, password `Abc1234!`
+
+
+### Windows
+
+Using PowerShell, as above except
+
+- To activate the virtual environment, `.\lettings-site\Scripts\Activate.ps1` 
+- Replace `which <my-command>` with `(Get-Command <my-command>).Path`
+
 
 ## Deployment
 
