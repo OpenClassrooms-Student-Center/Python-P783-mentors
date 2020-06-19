@@ -11,8 +11,10 @@ Holiday lettings website
 - Heroku account
 - Git CLI
 - SQLite3 CLI
-- Python interpreter, version 3.6 or higher. 
-- In the rest of the local development documentation, it is assumed the command `python` in 
+- Python interpreter, version 3.6 or higher
+- Sentry account
+
+In the rest of the local development documentation, it is assumed the command `python` in 
 your OS shell runs the above Python interpreter (unless a virtual environment is activated)
 
 ### macOS / Linux
