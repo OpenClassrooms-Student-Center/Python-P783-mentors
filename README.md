@@ -78,9 +78,15 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
     - Copy the API key `<heroku-api-key>`
     - Create a new app `<heroku-app-name>` (if you leave the field blank, Heroku will create a
     name for you)
+    - In Settings -> Config Vars, add the variables below with the appropriate values from Sentry
+        - `LETTINGS_SITE_SENTRY_AUTH`
+        - `LETTINGS_SITE_SENTRY_PROJECT_ID`
 - In CircleCI, create environment variables
     - `HEROKU_API_KEY` with value `<heroku-api-key>`
     - `HEROKU_APP_NAME` with value `<heroku-app-name>`
     - Trigger a build via the CircleCI web console or by pushing a commit to `master`
-    - Navigate to `https://<heroku-app-name>.herokuapp.com` in a browser
-    - Confirm the site is running
+- Navigate to `https://<heroku-app-name>.herokuapp.com` in a browser
+- Confirm the site is running
+- Navigate to `https://<heroku-app-name>.herokuapp.com/sentry-debug`, should see error appear
+in Sentry
+- Login to the admin panel using above credentials
