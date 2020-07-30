@@ -29,9 +29,9 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
 #### Create the virtual environment
 
 - `cd /path/to/lettings-site`
-- `python -m venv lettings-site`
+- `python -m venv venv`
 - `apt-get install python3-venv` (If previous step errors with package not found on Ubuntu)
-- Activate the environment `source lettings-site/bin/activate`
+- Activate the environment `source venv/bin/activate`
 - Confirm the command `python` now runs the Python interpreter in the virtual environment,
 `which python`
 - Confirm the version of the Python interpreter is 3.6 or higher `python --version`
@@ -41,7 +41,7 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
 #### Run the site
 
 - `cd /path/to/lettings-site`
-- `source lettings-site/bin/activate`
+- `source venv/bin/activate`
 - `pip install --requirement requirements.txt`
 - `python manage.py runserver`
 - Go to `http://localhost:8000` in a browser
@@ -50,13 +50,13 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
 #### Linting
 
 - `cd /path/to/lettings-site`
-- `source lettings-site/bin/activate`
+- `source venv/bin/activate`
 - `flake8`
 
 #### Unit tests
 
 - `cd /path/to/lettings-site`
-- `source lettings-site/bin/activate`
+- `source venv/bin/activate`
 - `pytest`
 
 #### Database
@@ -79,7 +79,7 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
 
 Using PowerShell, as above except
 
-- To activate the virtual environment, `.\lettings-site\Scripts\Activate.ps1` 
+- To activate the virtual environment, `.\venv\Scripts\Activate.ps1` 
 - Replace `which <my-command>` with `(Get-Command <my-command>).Path`
 
 
