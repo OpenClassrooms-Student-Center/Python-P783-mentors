@@ -103,5 +103,4 @@ in Sentry
 
 ## Containerisation
 
-- `Dockerfile` in this repository can be run locally `docker run --rm --publish 8000:8000 guydocker/lettings-site:0d2608cffcac0a22412f7534391dc1b0e476f913 runserver 0.0.0.0:8000` after authentication / the registry being made public
-- To test the above, navigate to `http://localhost:8000/admin`, you should see the site running
+Run site locally `docker run --rm --publish 8000:8000 guydocker/lettings-site:0d2608cffcac0a22412f7534391dc1b0e476f913 runserver 0.0.0.0:8000` after authentication / the registry being made public
