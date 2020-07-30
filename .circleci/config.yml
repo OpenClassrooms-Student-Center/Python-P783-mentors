@@ -33,7 +33,7 @@ jobs:
           when: always
      - run:
           name: Push image
-          command: docker push ${DOCKER_USER}/{CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+          command: docker push ${DOCKER_USER}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
           when: always
   deploy-production:
     executor: heroku/default
