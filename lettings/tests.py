@@ -12,6 +12,6 @@ def test_index(client):
 
 @pytest.mark.django_db
 def test_letting(client):
-    uri = reverse('lettings:letting', kwargs={'letting_id':3})
+    uri = reverse('lettings:letting', kwargs={'letting_id': 3})
     resp = client.get(uri[1:])
     assert 'title' in str(resp.content)
