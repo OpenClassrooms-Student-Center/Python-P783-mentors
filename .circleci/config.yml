@@ -4,7 +4,7 @@ orbs:
 jobs:
   build-and-test:
     docker:
-      - image: python:3
+      - image: python:3.8-slim-buster
     steps:
       - checkout
       - run:
@@ -19,6 +19,22 @@ jobs:
           name: Unit tests
           command: source venv/bin/activate && pytest
           when: always
+  containerise:
+    machine: true
+    steps:
+     - checkout
+     - run:
+          name: Authenticate to registry
+          command: echo "$DOCKER_PASSWORD" | docker login --username $DOCKER_USER --password-stdin
+          when: always
+     - run:
+          name: Build image
+          command: docker build --tag ${DOCKER_USER}/${CIRCLE_PROJECT_REPONAME}:${CIRCLE_BRANCH} .
+          when: always
+     - run:
+          name: Push image
+          command: docker push ${DOCKER_USER}/{CIRCLE_PROJECT_REPONAME}:${CIRCLE_SHA1}
+          when: always
   deploy-production:
     executor: heroku/default
     steps:
@@ -28,9 +44,16 @@ workflows:
   build-test-deploy:
     jobs:
       - build-and-test
-      - deploy-production:
+      - containerise:
           requires:
             - build-and-test
+          filters:
+            branches:
+              only:
+                - master
+      - deploy-production:
+          requires:
+            - containerise
           filters:
             branches:
               only:
