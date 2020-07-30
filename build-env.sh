@@ -2,6 +2,6 @@
 
 set -xe
 
-python -m venv lettings-site
-source lettings-site/bin/activate
+python -m venv venv
+source venv/bin/activate
 pip install --requirement requirements.txt
