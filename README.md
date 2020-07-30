@@ -74,14 +74,12 @@ your OS shell runs the above Python interpreter (unless a virtual environment is
 - Go to `http://localhost:8000/admin`
 - Login with user `admin`, password `Abc1234!`
 
-
 ### Windows
 
 Using PowerShell, as above except
 
 - To activate the virtual environment, `.\venv\Scripts\Activate.ps1` 
 - Replace `which <my-command>` with `(Get-Command <my-command>).Path`
-
 
 ## Deployment
 
@@ -101,3 +99,7 @@ Using PowerShell, as above except
 - Navigate to `https://<heroku-app-name>.herokuapp.com/sentry-debug`, should see error appear
 in Sentry
 - Login to the admin panel using above credentials
+
+## Containerisation
+
+The `Dockerfile` in this repository can be run locally `docker run --rm --publish 8000:8000 guydocker/lettings-site:0d2608cffcac0a22412f7534391dc1b0e476f913 runserver 0.0.0.0:8000` after authentication / making the registry public
