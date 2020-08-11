@@ -1,8 +1,8 @@
 from django.urls import path
 
-from . import views
+from .views import index, letting
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<int:letting_id>/', views.letting, name='letting')
+    path('', index, name='index'),
+    path('<int:letting_id>/', letting, name='letting')
 ]
