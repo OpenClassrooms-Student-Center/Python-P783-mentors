@@ -13,6 +13,7 @@ Holiday lettings website
 - SQLite3 CLI
 - Python interpreter, version 3.6 or higher
 - Sentry account
+- Dockerhub account
 
 In the rest of the local development documentation, it is assumed the command `python` in 
 your OS shell runs the above Python interpreter (unless a virtual environment is activated)
@@ -102,4 +103,4 @@ in Sentry
 
 ## Containerisation
 
-The `Dockerfile` in this repository can be run locally `docker run --rm --publish 8000:8000 guydocker/lettings-site:0d2608cffcac0a22412f7534391dc1b0e476f913 runserver 0.0.0.0:8000` after authentication / making the registry public
+Run site locally `docker run --rm --publish 8000:8000 guydocker/lettings-site:0d2608cffcac0a22412f7534391dc1b0e476f913 runserver 0.0.0.0:8000` after authentication / the registry being made public
