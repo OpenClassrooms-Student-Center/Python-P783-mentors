@@ -101,6 +101,6 @@ Using PowerShell, as above except
 in Sentry
 - Login to the admin panel using above credentials
 
-## Containerisation
+## Containerization
 
 Run site locally `docker run --rm --publish 8000:8000 guydocker/lettings-site:0d2608cffcac0a22412f7534391dc1b0e476f913 runserver 0.0.0.0:8000` after authentication / the registry being made public
